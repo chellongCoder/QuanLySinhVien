@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="com.bachkhoa.model">
+  <ClassDiagramComponents>
+    <Class name="MonHocNienChe" package="com.bachkhoa.model" visibility="public" xPosition="8.0" yPosition="20.0">
+      <Fields>
+        <Field name="TenMonHoc" type="String" visibility="private"/>
+        <Field name="diemGiuaKy" type="double" visibility="private"/>
+        <Field name="diemCuoiKy" type="double" visibility="private"/>
+        <Field name="soDonViHocTrinh" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="TenMonHoc"/>
+          <Argument type="double" name="diemGiuaKy"/>
+          <Argument type="double" name="diemCuoiKy"/>
+          <Argument type="int" name="soDonViHocTrinh"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getTenMonHoc" returnType="String" visibility="public"/>
+        <Method name="setTenMonHoc" returnType="void" visibility="public">
+          <Argument type="String" name="TenMonHoc"/>
+        </Method>
+        <Method name="getDiemGiuaKy" returnType="double" visibility="public"/>
+        <Method name="setDiemGiuaKy" returnType="void" visibility="public">
+          <Argument type="double" name="diemGiuaKy"/>
+        </Method>
+        <Method name="getDiemCuoiKy" returnType="double" visibility="public"/>
+        <Method name="setDiemCuoiKy" returnType="void" visibility="public">
+          <Argument type="double" name="diemCuoiKy"/>
+        </Method>
+        <Method name="getSoDonViHocTrinh" returnType="int" visibility="public"/>
+        <Method name="setSoDonViHocTrinh" returnType="void" visibility="public">
+          <Argument type="int" name="soDonViHocTrinh"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MonHocTinChi" package="com.bachkhoa.model" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="TenMonHoc" type="String" visibility="private"/>
+        <Field name="SoTinChi" type="int" visibility="private"/>
+        <Field name="MonHocTinChiDieuKien" type="MonHocTinChi" visibility="private"/>
+        <Field name="diemGiuaKy" type="double" visibility="private"/>
+        <Field name="diemCuoiKy" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="TenMonHoc"/>
+          <Argument type="int" name="SoTinChi"/>
+          <Argument type="MonHocTinChi" name="MonHocTinChiDieuKien"/>
+          <Argument type="double" name="diemGiuaKy"/>
+          <Argument type="double" name="diemCuoiky"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMonHocTinChiDieuKien" returnType="MonHocTinChi" visibility="public"/>
+        <Method name="setMonHocTinChiDieuKien" returnType="void" visibility="public">
+          <Argument type="MonHocTinChi" name="MonHocTinChiDieuKien"/>
+        </Method>
+        <Method name="getTenMonHoc" returnType="String" visibility="public"/>
+        <Method name="setTenMonHoc" returnType="void" visibility="public">
+          <Argument type="String" name="TenMonHoc"/>
+        </Method>
+        <Method name="getSoTinChi" returnType="int" visibility="public"/>
+        <Method name="setSoTinChi" returnType="void" visibility="public">
+          <Argument type="int" name="SoTinChi"/>
+        </Method>
+        <Method name="getDiemGiuaKy" returnType="double" visibility="public"/>
+        <Method name="setDiemGiuaKy" returnType="void" visibility="public">
+          <Argument type="double" name="diemGiuaKy"/>
+        </Method>
+        <Method name="getDiemCuoiKy" returnType="double" visibility="public"/>
+        <Method name="setDiemCuoiKy" returnType="void" visibility="public">
+          <Argument type="double" name="diemCuoiKy"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="MonHocTinChiDieuKien" source="com.bachkhoa.model.MonHocTinChi" target="com.bachkhoa.model.MonHocTinChi" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.bachkhoa.model.MonHocTinChi" target="com.bachkhoa.model.MonHocTinChi" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

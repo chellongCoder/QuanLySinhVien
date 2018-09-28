@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="com.bachkhoa.control">
+  <ClassDiagramComponents>
+    <Class name="SerilizeFactory" package="com.bachkhoa.control" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="luuFile" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Vector&lt;MonHocTinChi&gt;" name="vec"/>
+          <Argument type="String" name="path"/>
+        </Method>
+        <Method name="docFile" returnType="Vector&lt;MonHocTinChi&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="path"/>
+        </Method>
+        <Method name="luuFileMonNienChe" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Vector&lt;MonHocNienChe&gt;" name="vec"/>
+          <Argument type="String" name="path"/>
+        </Method>
+        <Method name="docFileNienChe" returnType="Vector&lt;MonHocNienChe&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="path"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SinhVienNCService" package="com.bachkhoa.control" visibility="public" xPosition="20.0" yPosition="208.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="danhSachMonHocNienChe" returnType="Vector&lt;MonHocNienChe&gt;" visibility="public"/>
+        <Method name="tinhDiemTongKetMonNC" returnType="double" visibility="public" isStatic="true">
+          <Argument type="double" name="diemGiuaKy"/>
+          <Argument type="double" name="diemCuoiKy"/>
+        </Method>
+        <Method name="tinhTrungBinhChungCacMonNC" returnType="double" visibility="public" isStatic="true">
+          <Argument type="Vector&lt;Double&gt;" name="diemTongKetMon"/>
+          <Argument type="Vector&lt;Integer&gt;" name="soDonViHocTrinh"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SinhVienTCService" package="com.bachkhoa.control" visibility="public" xPosition="20.0" yPosition="408.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="danhSachMonHocTinChi" returnType="Vector&lt;MonHocTinChi&gt;" visibility="public"/>
+        <Method name="tinhDiemTotNghiep" returnType="double" visibility="public">
+          <Argument type="double" name="diemGiuaKy"/>
+          <Argument type="double" name="diemCuoiKy"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

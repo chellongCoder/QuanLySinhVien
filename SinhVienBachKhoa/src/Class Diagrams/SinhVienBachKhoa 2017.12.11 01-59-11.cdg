@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="SinhVienBachKhoa">
+  <ClassDiagramComponents>
+    <Class name="SerilizeFactory" package="com.bachkhoa.control" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="luuFile" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Vector&lt;MonHocTinChi&gt;" name="vec"/>
+          <Argument type="String" name="path"/>
+        </Method>
+        <Method name="docFile" returnType="Vector&lt;MonHocTinChi&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="path"/>
+        </Method>
+        <Method name="luuFileMonNienChe" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Vector&lt;MonHocNienChe&gt;" name="vec"/>
+          <Argument type="String" name="path"/>
+        </Method>
+        <Method name="docFileNienChe" returnType="Vector&lt;MonHocNienChe&gt;" visibility="public" isStatic="true">
+          <Argument type="String" name="path"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SinhVienNCService" package="com.bachkhoa.control" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="danhSachMonHocNienChe" returnType="Vector&lt;MonHocNienChe&gt;" visibility="public"/>
+        <Method name="tinhDiemTongKetMonNC" returnType="double" visibility="public" isStatic="true">
+          <Argument type="double" name="diemGiuaKy"/>
+          <Argument type="double" name="diemCuoiKy"/>
+        </Method>
+        <Method name="tinhTrungBinhChungCacMonNC" returnType="double" visibility="public" isStatic="true">
+          <Argument type="Vector&lt;Double&gt;" name="diemTongKetMon"/>
+          <Argument type="Vector&lt;Integer&gt;" name="soDonViHocTrinh"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SinhVienTCService" package="com.bachkhoa.control" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="danhSachMonHocTinChi" returnType="Vector&lt;MonHocTinChi&gt;" visibility="public"/>
+        <Method name="tinhDiemTotNghiep" returnType="double" visibility="public">
+          <Argument type="double" name="diemGiuaKy"/>
+          <Argument type="double" name="diemCuoiKy"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MonHocNienChe" package="com.bachkhoa.model" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="TenMonHoc" type="String" visibility="private"/>
+        <Field name="diemGiuaKy" type="double" visibility="private"/>
+        <Field name="diemCuoiKy" type="double" visibility="private"/>
+        <Field name="soDonViHocTrinh" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="TenMonHoc"/>
+          <Argument type="double" name="diemGiuaKy"/>
+          <Argument type="double" name="diemCuoiKy"/>
+          <Argument type="int" name="soDonViHocTrinh"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getTenMonHoc" returnType="String" visibility="public"/>
+        <Method name="setTenMonHoc" returnType="void" visibility="public">
+          <Argument type="String" name="TenMonHoc"/>
+        </Method>
+        <Method name="getDiemGiuaKy" returnType="double" visibility="public"/>
+        <Method name="setDiemGiuaKy" returnType="void" visibility="public">
+          <Argument type="double" name="diemGiuaKy"/>
+        </Method>
+        <Method name="getDiemCuoiKy" returnType="double" visibility="public"/>
+        <Method name="setDiemCuoiKy" returnType="void" visibility="public">
+          <Argument type="double" name="diemCuoiKy"/>
+        </Method>
+        <Method name="getSoDonViHocTrinh" returnType="int" visibility="public"/>
+        <Method name="setSoDonViHocTrinh" returnType="void" visibility="public">
+          <Argument type="int" name="soDonViHocTrinh"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MonHocTinChi" package="com.bachkhoa.model" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="TenMonHoc" type="String" visibility="private"/>
+        <Field name="SoTinChi" type="int" visibility="private"/>
+        <Field name="MonHocTinChiDieuKien" type="MonHocTinChi" visibility="private"/>
+        <Field name="diemGiuaKy" type="double" visibility="private"/>
+        <Field name="diemCuoiKy" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="TenMonHoc"/>
+          <Argument type="int" name="SoTinChi"/>
+          <Argument type="MonHocTinChi" name="MonHocTinChiDieuKien"/>
+          <Argument type="double" name="diemGiuaKy"/>
+          <Argument type="double" name="diemCuoiky"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMonHocTinChiDieuKien" returnType="MonHocTinChi" visibility="public"/>
+        <Method name="setMonHocTinChiDieuKien" returnType="void" visibility="public">
+          <Argument type="MonHocTinChi" name="MonHocTinChiDieuKien"/>
+        </Method>
+        <Method name="getTenMonHoc" returnType="String" visibility="public"/>
+        <Method name="setTenMonHoc" returnType="void" visibility="public">
+          <Argument type="String" name="TenMonHoc"/>
+        </Method>
+        <Method name="getSoTinChi" returnType="int" visibility="public"/>
+        <Method name="setSoTinChi" returnType="void" visibility="public">
+          <Argument type="int" name="SoTinChi"/>
+        </Method>
+        <Method name="getDiemGiuaKy" returnType="double" visibility="public"/>
+        <Method name="setDiemGiuaKy" returnType="void" visibility="public">
+          <Argument type="double" name="diemGiuaKy"/>
+        </Method>
+        <Method name="getDiemCuoiKy" returnType="double" visibility="public"/>
+        <Method name="setDiemCuoiKy" returnType="void" visibility="public">
+          <Argument type="double" name="diemCuoiKy"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TestQuanLySinhVien" package="com.bachkhoa.test" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TestQuanLySinhVienNienChe" package="com.bachkhoa.test" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TestQuanLySinhVienTinChi" package="com.bachkhoa.test" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="QuanLySinhVien" package="com.bachkhoa.ui" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="btnSinhVienTinChi" type="JButton" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="title"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addControls" returnType="void" visibility="private"/>
+        <Method name="addEvents" returnType="void" visibility="private"/>
+        <Method name="showWindow" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="QuanLySinhVienNienChe" package="com.bachkhoa.ui" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="listMonHocNienChe" type="JList&lt;MonHocNienChe&gt;" visibility="package"/>
+        <Field name="dtmDanhSachMonHocNienCheDangKy" type="DefaultTableModel" visibility="package"/>
+        <Field name="tblDanhSachMonHocNienChe" type="JTable" visibility="package"/>
+        <Field name="txtDiemGiuaKy" type="JTextField" visibility="package"/>
+        <Field name="btnKetQuaMon" type="JButton" visibility="package"/>
+        <Field name="MonHocNienCheSelected" type="MonHocNienChe" visibility="package"/>
+        <Field name="diemTrungBinhMonNC" type="double" visibility="package"/>
+        <Field name="tongSoDonViHocTrinhCacMon" type="int" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="title"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="hienThiDanhMucLenList" returnType="void" visibility="private"/>
+        <Method name="addControls" returnType="void" visibility="private"/>
+        <Method name="addEvents" returnType="void" visibility="private"/>
+        <Method name="ketQuanMon" returnType="void" visibility="private"/>
+        <Method name="xuLyKiemTraTotNghiep" returnType="void" visibility="private"/>
+        <Method name="hienThiMonHocNienChe" returnType="void" visibility="private"/>
+        <Method name="ShowWindow" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="QuanLySinhVienTinChi" package="com.bachkhoa.ui" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="listMonHocTinChi" type="JList&lt;MonHocTinChi&gt;" visibility="package"/>
+        <Field name="btnDangKiMonHocTinChi" type="JButton" visibility="package"/>
+        <Field name="dtmDanhSachMonHocTinChiDangKy" type="DefaultTableModel" visibility="package"/>
+        <Field name="tblDanhSachMonHocTinChi" type="JTable" visibility="package"/>
+        <Field name="txtDiemGiuaKy" type="JTextField" visibility="package"/>
+        <Field name="btnKiemTraQuaMon" type="JButton" visibility="package"/>
+        <Field name="MonHocTinChiSelected" type="MonHocTinChi" visibility="package"/>
+        <Field name="MonHocTinChiDaTotNghiep" type="Vector&lt;MonHocTinChi&gt;" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="title"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="hienThiDanhMucLenList" returnType="void" visibility="private"/>
+        <Method name="addControls" returnType="void" visibility="private"/>
+        <Method name="addEvents" returnType="void" visibility="private"/>
+        <Method name="xuLyHienThiCacMonTotNghiep" returnType="void" visibility="private"/>
+        <Method name="xuLyKiemTraQuaMon" returnType="void" visibility="private"/>
+        <Method name="xuLyLuuMonHocTinChi" returnType="boolean" visibility="private"/>
+        <Method name="hienThiMonHocTinChiDangKi" returnType="void" visibility="public"/>
+        <Method name="ShowWindow" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.bachkhoa.model.MonHocTinChi" target="com.bachkhoa.model.MonHocTinChi" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.bachkhoa.control.SerilizeFactory" target="com.bachkhoa.model.MonHocTinChi" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.bachkhoa.control.SinhVienNCService" target="com.bachkhoa.model.MonHocNienChe" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.bachkhoa.control.SinhVienTCService" target="com.bachkhoa.model.MonHocTinChi" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listMonHocTinChi" source="com.bachkhoa.ui.QuanLySinhVienTinChi" target="com.bachkhoa.model.MonHocTinChi" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="JList&lt;MonHocTinChi&gt;"/>
+    <HasRelation name="MonHocNienCheSelected" source="com.bachkhoa.ui.QuanLySinhVienNienChe" target="com.bachkhoa.model.MonHocNienChe" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="MonHocTinChiSelected" source="com.bachkhoa.ui.QuanLySinhVienTinChi" target="com.bachkhoa.model.MonHocTinChi" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="MonHocTinChiDieuKien" source="com.bachkhoa.model.MonHocTinChi" target="com.bachkhoa.model.MonHocTinChi" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="MonHocTinChiDaTotNghiep" source="com.bachkhoa.ui.QuanLySinhVienTinChi" target="com.bachkhoa.model.MonHocTinChi" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listMonHocNienChe" source="com.bachkhoa.ui.QuanLySinhVienNienChe" target="com.bachkhoa.model.MonHocNienChe" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="JList&lt;MonHocNienChe&gt;"/>
+    <UseRelation source="com.bachkhoa.control.SerilizeFactory" target="com.bachkhoa.model.MonHocNienChe" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
